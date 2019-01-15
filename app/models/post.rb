@@ -8,11 +8,11 @@ class Post < ApplicationRecord
       title: title,
       content: content,
       og: {
-        url: domain + url_helper.post_path(id: id),
+        url: "https://boiling-fortress-75740.herokuapp.com" + url_helper.post_path(id: id),
         type: 'post',
         title: title,
         description: content,
-        image: domain + image&.url,
+        image: "https://boiling-fortress-75740.herokuapp.com" + image&.url,
         site_name: 'Social Share'
       }
     }
