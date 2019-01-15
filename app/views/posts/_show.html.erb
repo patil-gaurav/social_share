@@ -1,0 +1,41 @@
+<div id="postDetail" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div id="post_detail_info" data-post-info="<%= @post.to_json %>"> </div>
+      <div class="modal-body">
+        <p id="notice"><%= notice %></p>
+        <p>
+          <strong>Title:</strong>
+          <%= @post.title %>
+        </p>
+
+        <p>
+          <strong>Content:</strong>
+          <%= @post.content %>
+        </p>
+
+        <p>
+          <strong>Image:</strong>
+          <%= image_tag @post.image.url %>
+        </p>
+
+        <%= link_to 'Edit', edit_post_path(@post) %> |
+        <%= link_to 'Back', posts_path %>
+
+        <div class="my-image-container">
+          <%= link_to 'share', 'javascript:void(0)', class: 'fb-share-image' %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

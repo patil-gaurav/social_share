@@ -6,7 +6,7 @@ window.fbAsyncInit = function() {
         version          : 'v2.10'
     });
     
-    $( '.fb-share-image' ).click(function(e){
+    $(document).on("click", ".fb-share-image", function(e){
       e.preventDefault();
       var image = $(this).siblings('img').attr('src');
       let url = $(this).data('url')
