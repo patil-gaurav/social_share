@@ -16,5 +16,6 @@ module SocialShare
     # -- all .rb files in that directory are automatically loaded.
     config.assets.initialize_on_precompile = false
     config.assets.enabled = true
+    config.assets.js_compressor = Uglifier.new(harmony: true)
   end
 end
